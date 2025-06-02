@@ -67,3 +67,9 @@ def remove(index):
     removed = tasks.pop(index - 1)
     save_tasks(tasks)
     click.echo(f"Tarefa removida: {removed['titulo']}")
+
+@cli.command()
+def clear():
+    """Remove todas as tarefas."""
+    save_tasks([])
+    click.echo("Todas as tarefas foram removidas.")
