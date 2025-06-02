@@ -29,3 +29,15 @@ def add(titulo, descricao, data):
     tasks.append(nova_tarefa)
     save_tasks(tasks)
     click.echo("Tarefa adicionada com sucesso!")
+@cli.command()
+@click.option("--concluidas", is_flag=True, help="Mostrar somente tarefas concluídas")
+def list(concluidas):
+    """Lista tarefas (pendentes por padrão)."""
+    tasks = load_tasks()
+    filtradas = [t for t in tasks if t["concluida"] == concluidas]
+    if not filtradas:
+        click.echo("Nenhuma tarefa encontrada para esse filtro.")
+        return
+    for i, task in enumerate(filtradas, start=1):
+        status = "✔" if task["concluida"] else "✘"
+        click.echo(f"{i}. [{status}] {task['titulo']} - {task['descricao']} (Vence em {task['data']})")
