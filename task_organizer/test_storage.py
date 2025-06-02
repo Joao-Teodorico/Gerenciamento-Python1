@@ -5,3 +5,6 @@ tasks = [
 ]
 save_tasks(tasks)
 loaded_tasks = load_tasks()
+print("Tarefas carregadas:")
+for t in loaded_tasks:
+    print(t)
