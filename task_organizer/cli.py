@@ -73,3 +73,6 @@ def clear():
     """Remove todas as tarefas."""
     save_tasks([])
     click.echo("Todas as tarefas foram removidas.")
+
+if __name__ == "__main__":
+    cli()
