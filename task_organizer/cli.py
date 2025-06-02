@@ -55,3 +55,15 @@ def complete(index):
     tarefa["concluida"] = True
     save_tasks(tasks)
     click.echo(f"Tarefa '{tarefa['titulo']}' marcada como concluída!")
+
+@cli.command()
+@click.argument("index", type=int)
+def remove(index):
+    """Remove uma tarefa pelo índice."""
+    tasks = load_tasks()
+    if index < 1 or index > len(tasks):
+        click.echo("Índice inválido.")
+        return
+    removed = tasks.pop(index - 1)
+    save_tasks(tasks)
+    click.echo(f"Tarefa removida: {removed['titulo']}")
