@@ -4,3 +4,4 @@ tasks = [
     {"titulo": "Tarefa 2", "descricao": "Descrição 2", "data": "2025-06-02", "concluida": True}
 ]
 save_tasks(tasks)
+loaded_tasks = load_tasks()
