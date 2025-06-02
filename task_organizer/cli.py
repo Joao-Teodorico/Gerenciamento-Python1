@@ -41,3 +41,17 @@ def list(concluidas):
     for i, task in enumerate(filtradas, start=1):
         status = "✔" if task["concluida"] else "✘"
         click.echo(f"{i}. [{status}] {task['titulo']} - {task['descricao']} (Vence em {task['data']})")
+
+@cli.command()
+@click.argument("index", type=int)
+def complete(index):
+    """Marca a tarefa como concluída pelo índice da listagem pendente."""
+    tasks = load_tasks()
+    pendentes = [t for t in tasks if not t["concluida"]]
+    if index < 1 or index > len(pendentes):
+        click.echo("Índice inválido.")
+        return
+    tarefa = pendentes[index - 1]
+    tarefa["concluida"] = True
+    save_tasks(tasks)
+    click.echo(f"Tarefa '{tarefa['titulo']}' marcada como concluída!")
