@@ -6,3 +6,5 @@ tasks = [
 ]
 
 save_tasks(tasks)
+
+loaded_tasks = load_tasks()
