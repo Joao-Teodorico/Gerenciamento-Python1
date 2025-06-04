@@ -75,9 +75,7 @@ poetry run python main.py remove <índice_da_lista_completa>
 \`\`\`
 
 ---
-
-## 📁 Estrutura de Pastas
-
+📁 Estrutura de Pastas
 
 Gerenciamento-Python1/
 ├── main.py                  # Ponto de entrada do projeto
@@ -91,6 +89,7 @@ Gerenciamento-Python1/
 ├── poetry.lock              # Lockfile de dependências
 ├── README.md                # Este arquivo
 └── LICENSE                  # Licença do projeto
+
 
 
 ---
