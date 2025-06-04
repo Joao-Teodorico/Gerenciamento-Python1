@@ -1,12 +1,16 @@
 import csv
+from pathlib import Path
 
-FILE_PATH = "tasks.csv"
+FILE_PATH = Path("tasks.csv")
 
 def save_tasks(tasks):
     with open(FILE_PATH, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.DictWriter(file, fieldnames=["titulo", "descricao", "data", "concluida"])
         writer.writeheader()
-        writer.writerows(tasks)
+        for task in tasks:
+            task_copy = task.copy()
+            task_copy["concluida"] = str(task_copy["concluida"])
+            writer.writerow(task_copy)
 
 def load_tasks():
     tasks = []
@@ -19,20 +23,3 @@ def load_tasks():
     except FileNotFoundError:
         pass
     return tasks
-tasks = [
-    {"titulo": "Tarefa 1", "descricao": "Descrição 1", "data": "2025-06-01", "concluida": False},
-    {"titulo": "Tarefa 2", "descricao": "Descrição 2", "data": "2025-06-02", "concluida": True}
-]
-
-from storage import load_tasks, save_tasks
-from example_tasks import tasks
-
-# Salva as tarefas no CSV
-save_tasks(tasks)
-
-# Carrega as tarefas do CSV
-loaded_tasks = load_tasks()
-
-print("Tarefas carregadas:")
-for t in loaded_tasks:
-    print(t)
