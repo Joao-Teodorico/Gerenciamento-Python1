@@ -1,54 +1,98 @@
-📋 Task Organizer – Gerenciador de Tarefas em Python
+# ✅ Task Organizer – Gerenciador de Tarefas em Python
 
-Este projeto é um gerenciador de tarefas simples desenvolvido em Python. Ele permite salvar e carregar tarefas de um arquivo CSV, simulando um pequeno sistema de controle pessoal de atividades.
+Este projeto é um gerenciador de tarefas simples, desenvolvido em Python. Ele permite **salvar** e **carregar tarefas** a partir de um arquivo CSV, simulando um sistema básico de controle de atividades pessoais.
 
-🚀 Funcionalidades
-✅ Adicionar tarefas manualmente (via código)
+---
 
-✅ Salvar tarefas em um arquivo tasks.csv
+## ✨ Funcionalidades
 
-✅ Carregar tarefas salvas e exibir no terminal
+- ➕ Adicionar tarefas manualmente (via código ou script)
+- 💾 Salvar tarefas em um arquivo `tasks.csv`
+- 📂 Carregar tarefas salvas e exibir no terminal
 
-📂 Uso de arquivos CSV como forma de armazenamento simples
+---
 
-🧱 Organização modular com separação de responsabilidades (storage, testes, main)
+## 🗃️ Armazenamento
 
-🧰 Tecnologias e dependências
-Python 3.10+ ou 3.13
+- Utiliza arquivos CSV como forma simples de persistência de dados
+- Organização modular com separação de responsabilidades (`storage`, `test_storage`, `main`)
 
-poetry (como gerenciador de dependências)
+---
 
-Biblioteca padrão do Python (csv, pathlib)
+## 🔧 Tecnologias e Dependências
 
-📦 Para instalar as dependências
-poetry install
+- **Python 3.10+ até 3.13**
+- **Poetry** como gerenciador de dependências
+- Bibliotecas padrão: `csv`, `pathlib`
 
-📁 Estrutura de pastas
-Gerenciamento-Python1/
-├── main.py                    # Arquivo principal (ponto de entrada)
-├── tasks.csv                 # Arquivo onde as tarefas são salvas
-├── test_storage.py           # Script de teste
-├── task_organizer/
-│   └── storage.py            # Funções de salvar e carregar tarefas
-├── pyproject.toml            # Arquivo de configuração do Poetry
-├── README.md                 # Este arquivo
+---
 
+## 📦 Instalação
 
-▶️ Como executar
+1. Clone o repositório:
+
+```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 cd nome-do-repositorio
+```
 
-Instale o ambiente virtual:
+2. Instale o ambiente com o Poetry:
+
+```bash
 poetry install
+```
 
-Rode o projeto:
-poetry run python task_organizer/test_storage.py
+---
 
-Se quiser rodar diretamente sem Poetry:
+## ▶️ Como executar
+
+### Rodar o script principal:
+
+```bash
+poetry run python main.py
+```
+
+### Rodar o script de teste:
+
+```bash
+poetry run python -m task_organizer.test_storage
+```
+
+Ou sem o Poetry:
+
+```bash
 python task_organizer/test_storage.py
-📝 Isso irá salvar tarefas de exemplo no arquivo CSV e imprimi-las no terminal.
+```
 
-✍️ Colaboradores
-João Teodorico De Sousa Segundo
-Anderson Matheus Correia Souza de Assunção
-Isabelly dos Santos Nascimento
+---
+
+## 📁 Estrutura de Pastas
+
+```
+Gerenciamento-Python1/
+├── main.py                  # Ponto de entrada do projeto
+├── tasks.csv                # Arquivo com as tarefas salvas
+├── test_storage.py          # Script de testes
+├── task_organizer/
+│   ├── cli.py               # CLI (em construção ou expansão futura)
+│   ├── storage.py           # Funções de salvar/carregar tarefas
+│   └── test_storage.py      # Versão interna de testes
+├── pyproject.toml           # Configuração do projeto (Poetry)
+├── poetry.lock              # Lockfile de dependências
+├── README.md                # Este arquivo
+└── LICENSE                  # Licença do projeto
+```
+
+---
+
+## 👥 Colaboradores
+
+- João Teodorico de Sousa Segundo  
+- Anderson Matheus Correia Souza de Assunção  
+- Isabelly dos Santos Nascimento
+
+---
+
+## 📝 Licença
+
+Este projeto está licenciado sob a licença MIT.
