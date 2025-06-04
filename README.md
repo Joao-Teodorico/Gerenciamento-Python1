@@ -77,19 +77,20 @@ poetry run python main.py remove <índice_da_lista_completa>
 ---
 \`\`\`
 ## 📁 Estrutura de Pastas
-Gerenciamento-Python1/
-├── main.py # Ponto de entrada do projeto
-├── tasks.csv # Arquivo com as tarefas salvas
-├── test_storage.py # Script de testes
-├── task_organizer/
-│ ├── cli.py # CLI (em construção ou expansão futura)
-│ ├── storage.py # Funções de salvar/carregar tarefas
-│ └── test_storage.py # Versão interna de testes
-├── pyproject.toml # Configuração do projeto (Poetry)
-├── poetry.lock # Lockfile de dependências
-├── README.md # Este arquivo
-└── LICENSE # Licença do projeto
-\`\`\`
+
+- Gerenciamento-Python1/
+  - `main.py` – Ponto de entrada do projeto
+  - `tasks.csv` – Arquivo com as tarefas salvas
+  - `test_storage.py` – Script de testes
+  - `task_organizer/`
+    - `cli.py` – CLI (em construção ou expansão futura)
+    - `storage.py` – Funções de salvar/carregar tarefas
+    - `test_storage.py` – Versão interna de testes
+  - `pyproject.toml` – Configuração do projeto (Poetry)
+  - `poetry.lock` – Lockfile de dependências
+  - `README.md` – Este arquivo
+  - `LICENSE` – Licença do projeto
+
 ---
 
 ## 👥 Colaboradores
