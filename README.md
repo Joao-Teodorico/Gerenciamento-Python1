@@ -89,9 +89,6 @@ Gerenciamento-Python1/
 ├── poetry.lock              # Lockfile de dependências
 ├── README.md                # Este arquivo
 └── LICENSE                  # Licença do projeto
-
-
-
 ---
 
 ## 👥 Colaboradores
