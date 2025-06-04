@@ -1,5 +1,6 @@
 import csv
 
+
 FILE_PATH = "tasks.csv"
 
 def save_tasks(tasks):
@@ -24,8 +25,9 @@ tasks = [
     {"titulo": "Tarefa 2", "descricao": "Descrição 2", "data": "2025-06-02", "concluida": True}
 ]
 
+# from storage import load_tasks, save_tasks
 from storage import load_tasks, save_tasks
-from example_tasks import tasks
+# from example_tasks import tasks
 
 # Salva as tarefas no CSV
 save_tasks(tasks)
